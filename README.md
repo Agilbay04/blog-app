@@ -1,9 +1,9 @@
 ## Blog API
 
 <p align="center">
-  <a href="https://www.typescriptlang.org/" target="blank"><img src="hhttps://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png" width="120" alt="Nest Logo" /></a>
+  <a href="https://www.typescriptlang.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png" width="120" alt="Nest Logo" /></a>
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-  <a href="https://www.prisma.io/" target="blank"><img src="https://prismalens.vercel.app/header/logo-white.svg" width="120" alt="Nest Logo" /></a>
+  <a href="https://www.prisma.io/" target="blank"><img src="https://prismalens.vercel.app/header/logo-white.svg" width="240" alt="Nest Logo" /></a>
 </p>
 
 ## Description
