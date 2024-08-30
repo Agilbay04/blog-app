@@ -80,8 +80,6 @@ View of api documentation page using swagger. There are two collections named ``
 </p>
 
 
-
-
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
