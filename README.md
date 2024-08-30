@@ -58,6 +58,15 @@ $ http://localhost:5000/api-docs
 ```
 
 
+## Swagger Api Docs
+
+View of api documentation page using swagger. There are two collections named Users Collection and Post Collection which have implemented all request methods (GET, POST, PUT, PATCH, DELETE)
+
+<p align="center">
+  <a href="" target="blank"><img src="/img/swagger-01.png" width="100%" alt="Swagger-01 Image" /></a>
+</p>
+
+
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
