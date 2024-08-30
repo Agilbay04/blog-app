@@ -60,11 +60,26 @@ $ http://localhost:5000/api-docs
 
 ## Swagger Api Docs
 
-View of api documentation page using swagger. There are two collections named Users Collection and Post Collection which have implemented all request methods (GET, POST, PUT, PATCH, DELETE)
+View of api documentation page using swagger. There are two collections named ```Users Collection`` & 
+```Post Collection``` which have implemented all request methods (GET, POST, PUT, PATCH, DELETE)
 
 <p align="center">
   <a href="" target="blank"><img src="/img/swagger-01.png" width="100%" alt="Swagger-01 Image" /></a>
 </p>
+
+### Contains of User Collection
+
+<p align="center">
+  <a href="" target="blank"><img src="/img/swagger-02.png" width="100%" alt="Swagger-02 Image" /></a>
+</p>
+
+### Contains of Post Collection
+
+<p align="center">
+  <a href="" target="blank"><img src="/img/swagger-03.png" width="100%" alt="Swagger-03 Image" /></a>
+</p>
+
+
 
 
 ## License
