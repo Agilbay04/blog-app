@@ -1,59 +1,57 @@
 ## Blog API
 
 <p align="center">
-  <a href="https://www.typescriptlang.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png" width="120" alt="Nest Logo" /></a>
+  <a href="https://www.typescriptlang.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png" width="120" alt="TypeScript Logo" /></a>
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-  <a href="https://www.prisma.io/" target="blank"><img src="https://prismalens.vercel.app/header/logo-white.svg" width="240" alt="Nest Logo" /></a>
+  <a href="https://www.postgresql.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" width="120" alt="PostgreSQL Logo" /></a>
+  <a href="https://www.prisma.io/" target="blank"><img src="https://prismalens.vercel.app/header/logo-white.svg" width="360" alt="Prisma Logo" /></a>
 </p>
 
 ## Description
 
 A simple application for post management, built using the TypeScript, Nest.js framework, and Prisma ORM.
 
+
 ## Project setup
 
 ```bash
-# clone this project
+# clone project
 $ git clone https://github.com/Agilbay04/blog-app.git
 
-# install all package from package.json
+# install package
 $ npm install
 ```
 
-## Compile and run the project
+
+## Database setup
+
+In this project, the database uses a Docker container and the ORM uses Prisma.
+
+```bash
+# create container database
+$ docker-compose up --build -d
+
+# run prisma migration to apply the schema to the database
+$ npx prisma migrate dev --name init
+
+# generate prisma client
+$ npx prisma generate
+```
+
+
+## Run the project
 
 ```bash
 # development
 $ npm run start
 
-# watch mode
-$ npm run start:dev
+# app listen on
+$ `http://localhost:5000`
 
-# production mode
-$ npm run start:prod
+# app swagger docs
+$ `http://localhost:5000/api-docs`
 ```
 
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
