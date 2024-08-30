@@ -1,4 +1,4 @@
-## Blog API
+<h1 align="Center">Blog API</h1>
 
 <p align="center">
   <a href="https://www.typescriptlang.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png" width="120" alt="TypeScript Logo" /></a>
@@ -46,10 +46,10 @@ $ npx prisma generate
 $ npm run start
 
 # app listen on
-$ `http://localhost:5000`
+$ http://localhost:5000
 
 # app swagger docs
-$ `http://localhost:5000/api-docs`
+$ http://localhost:5000/api-docs
 ```
 
 
