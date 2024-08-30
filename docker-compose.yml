@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres:
+      image: postgres:latest
+      container_name: blog_db_container
+      ports:
+        - "5436:5432"
+      environment:
+        POSTGRES_USER: app_blog
+        POSTGRES_PASSWORD: sidekick
+        POSTGRES_DB: blog-app
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
