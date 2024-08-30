@@ -23,6 +23,11 @@ $ npm install
 ```
 
 
+## Setup .env file
+
+Prepare the .env file used to store the application environment.
+
+
 ## Database setup
 
 In this project, the database uses a Docker container and the ORM uses Prisma.
