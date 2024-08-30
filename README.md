@@ -9,7 +9,7 @@
 
 ## Description
 
-A simple application for post management, built using the TypeScript, Nest.js framework, and Prisma ORM.
+A simple application for post management, built using the TypeScript, Nest.js framework, PostgreSQL database, and Prisma ORM.
 
 
 ## Project setup
