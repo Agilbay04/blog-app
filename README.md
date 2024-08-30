@@ -60,7 +60,7 @@ $ http://localhost:5000/api-docs
 
 ## Swagger Api Docs
 
-View of api documentation page using swagger. There are two collections named ```Users Collection`` & 
+View of api documentation page using swagger. There are two collections named ```Users Collection``` & 
 ```Post Collection``` which have implemented all request methods (GET, POST, PUT, PATCH, DELETE)
 
 <p align="center">
