@@ -29,12 +29,12 @@ import { UserFormDto } from 'src/dtos/forms/user.form.dto';
 
 @Controller('user')
 @ApiBearerAuth()
-@UseGuards(AuthGuard)
 @ApiTags('User Collection')
 export class UserController {
     constructor(private readonly userService: UserService) {}
 
     @Get('fetch')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Fetch users data from api jsonplaceholder.typicode.com' })
     @ApiOkResponse({ type: ApiBaseResponse, status: 200, description: 'Success fetch users' })
     @ApiUnauthorizedResponse({ type: ApiBaseResponse, status: 401, description: 'Unauthorized' })
@@ -43,6 +43,7 @@ export class UserController {
     }
 
     @Get()
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Get users data from database' })
     @ApiOkResponse({ type: ApiBaseResponse, status: 200, description: 'Success get users' })
     @ApiBadRequestResponse({ type: ApiBaseResponse, status: 400, description: 'Failed get users' })
@@ -54,6 +55,7 @@ export class UserController {
     }
 
     @Get(':id')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Get user data from jsonplaceholder.typicode.com by id' })
     @ApiParam({ name: 'id', type: Number })
     @ApiOkResponse({ type: ApiBaseResponse, status: 200, description: 'Success get user' })
@@ -77,6 +79,7 @@ export class UserController {
     }
 
     @Post()
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Create user data to jsonplaceholder.typicode.com' })
     @ApiBody({ type: UserFormDto })
     @ApiCreatedResponse({ type: ApiBaseResponse, status: 201, description: 'Success create user' })
@@ -88,6 +91,7 @@ export class UserController {
     }
 
     @Put(':id')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Update user data to jsonplaceholder.typicode.com using put mehod' })
     @ApiParam({ name: 'id', type: Number })
     @ApiBody({ type: UserFormDto })
@@ -101,6 +105,7 @@ export class UserController {
     }
 
     @Patch(':id')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Update user data to jsonplaceholder.typicode.com using patch mehod' })
     @ApiParam({ name: 'id', type: Number })
     @ApiBody({ type: UserFormDto })
@@ -114,6 +119,7 @@ export class UserController {
     }
 
     @Delete(':id')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Delete user data from jsonplaceholder.typicode.com by id' })
     @ApiParam({ name: 'id', type: Number })
     @ApiOkResponse({ type: ApiBaseResponse, status: 200, description: 'Success delete user' })

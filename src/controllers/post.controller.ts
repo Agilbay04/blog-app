@@ -32,12 +32,12 @@ import { request } from 'express';
 
 @Controller('post')
 @ApiBearerAuth()
-@UseGuards(AuthGuard)
 @ApiTags('Post Collection')
 export class PostController {
     constructor(private readonly postService: PostService) {}
-
+    
     @Get('fetch')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Fetch posts data from api jsonplaceholder.typicode.com' })
     @ApiOkResponse({ type: ApiBaseResponse<PostDto[]>, status: 200, description: 'Success fetch posts' })
     @ApiBadRequestResponse({ status: 400, description: 'Failed to fetch posts' })
@@ -48,6 +48,7 @@ export class PostController {
     }
 
     @Get()
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Get posts data from database' })
     @ApiOkResponse({ type: ApiBaseResponse<PostDto>, status: 200, description: 'Success get posts' })
     @ApiBadRequestResponse({ status: 400, description: 'Failed to get posts' })
@@ -58,6 +59,7 @@ export class PostController {
     }
 
     @Get(':id')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Get post data from jsonplaceholder.typicode.com by id' })
     @ApiParam({ name: 'id', type: Number })
     @ApiOkResponse({ type: ApiBaseResponse<PostDto>, status: 200, description: 'Success get post' })
@@ -78,6 +80,7 @@ export class PostController {
     }
 
     @Post()
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Create post data to jsonplaceholder.typicode.com' })
     @ApiBody({ type: PostFormDto })
     @ApiCreatedResponse({ type: ApiBaseResponse<PostDto>, status: 201, description: 'Success create post' })
@@ -90,6 +93,7 @@ export class PostController {
     }
 
     @Put(':id')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Update post data from jsonplaceholder.typicode.com by id using put method' })
     @ApiParam({ name: 'id', type: Number })
     @ApiBody({ type: PostFormDto })
@@ -102,6 +106,7 @@ export class PostController {
     }
 
     @Patch(':id')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Update post data from jsonplaceholder.typicode.com by id using patch method' })
     @ApiParam({ name: 'id', type: Number })
     @ApiBody({ type: PostFormDto })
@@ -114,6 +119,7 @@ export class PostController {
     }
 
     @Delete(':id')
+    @UseGuards(AuthGuard)
     @ApiOperation({ summary: 'Delete post data from jsonplaceholder.typicode.com by id' })
     @ApiParam({ name: 'id', type: Number })
     @ApiOkResponse({ type: ApiBaseResponse<PostDto>, status: 200, description: 'Success delete post' })
