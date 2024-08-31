@@ -7,6 +7,7 @@ import { firstValueFrom } from 'rxjs';
 import { UserMapper } from 'src/mappers/user.mapper';
 import { ApiBaseResponse } from 'src/dtos/responses/api.base.response';
 import { UserFormDto } from 'src/dtos/forms/user.form.dto';
+import { HashingPassword } from 'src/helpers/auth.hepler';
 
 @Injectable()
 export class UserService {
@@ -234,6 +235,10 @@ export class UserService {
     }
 
     private async saveDate(userData: UserDto): Promise<ApiBaseResponse<UserDto>> {
+
+        const defaultPassword = this.config.get<string>('defaultPassword');
+        const hashedPassword = await HashingPassword(defaultPassword);
+
         try {
             const addressString = [
                 userData.address.street,
@@ -266,6 +271,7 @@ export class UserService {
                     name: userData.name,
                     username: userData.username,
                     email: userData.email,
+                    password: hashedPassword,
                     phone: userData.phone,
                     website: userData.website,
                     address: addressString,
@@ -286,6 +292,31 @@ export class UserService {
                     statusCode: error.status,
                     message: error.message,
                     data: [],
+                    error: error.stack
+                },
+                error.status
+            )
+        }
+    }
+
+    async findByUsername(username: string): Promise<ApiBaseResponse<any>> {
+        try {
+            const user = await this.prisma.user.findUnique({
+                where: { username },
+            });
+
+            return {
+                success: true,
+                statusCode: 200,
+                message: 'Success find user',
+                data: user,
+            };
+        } catch (error) {
+            throw new HttpException(
+                {
+                    success: false,
+                    statusCode: error.status,
+                    message: error.message,
                     error: error.stack
                 },
                 error.status

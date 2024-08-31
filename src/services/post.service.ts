@@ -1,4 +1,4 @@
-import { HttpException, Injectable } from '@nestjs/common';
+import { HttpException, Injectable, Logger, Req } from '@nestjs/common';
 import { PrismaService } from 'src/services/prisma.service';
 import { ConfigService } from '@nestjs/config';
 import { HttpService } from '@nestjs/axios';
@@ -97,9 +97,10 @@ export class PostService {
         }
     }
 
-    async createPost(postData: PostFormDto): Promise<ApiBaseResponse<PostDto>> {
+    async createPost(idUser: number, postData: PostFormDto): Promise<ApiBaseResponse<PostDto>> {
         let post = new PostDto();
         try {
+            postData.userId = idUser;
             const apiUrl = this.config.get<string>('apiUrl');
             const response = await firstValueFrom(this.httpService.post(`${apiUrl}/posts`, postData));
             post = PostMapper(response.data);

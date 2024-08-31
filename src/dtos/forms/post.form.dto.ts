@@ -10,7 +10,5 @@ export class PostFormDto {
     @IsNotEmpty()
     body: string;
 
-    @ApiProperty({ type: Number, example: 1 })
-    @IsNotEmpty()
     userId: number;
 }
