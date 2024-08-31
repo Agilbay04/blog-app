@@ -35,7 +35,7 @@ Prepare the .env file used to store the application environment.
 
 ## Database setup
 
-In this project, the database uses a Docker container and the ORM uses Prisma.
+This project uses a PostgreSQL database that is containerized using Docker, and the ORM uses Prisma.
 
 ```bash
 # create container database
