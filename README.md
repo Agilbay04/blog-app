@@ -72,8 +72,8 @@ $ http://localhost:5000/api-docs
 After completing the project setup, please open the URL ```http://localhost:5000/api-docs``` in the browser, then run the endpoint ```/users/sync``` to retrieve user data and save it to the database, then run the endpoint ```/post/sync``` to retrieve post data and save it to the database.
 ###
 After data sync is complete you can use this account:
-- username: brat
-- password: 12345678
+- <strong>username:</strong> Bret
+- <strong>password:</strong> 12345678
 to login to the application and access other endpoints.
 
 
