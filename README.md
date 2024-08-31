@@ -12,6 +12,11 @@
 A simple application for post management, built using the TypeScript, Nest.js framework, PostgreSQL database, and Prisma ORM.
 
 
+## Requirements
+
+Node.js version 20.15.1 or >
+
+
 ## Project setup
 
 ```bash
@@ -78,6 +83,12 @@ methods (GET, POST, PUT, PATCH, DELETE). All endpoints are secured using Bearer 
 
 <p align="center">
   <a href="" target="blank"><img src="/img/swagger-03.png" width="100%" alt="Swagger-03 Image" /></a>
+</p>
+
+### Contains of Auth Collection
+
+<p align="center">
+  <a href="" target="blank"><img src="/img/swagger-04.png" width="100%" alt="Swagger-04 Image" /></a>
 </p>
 
 
