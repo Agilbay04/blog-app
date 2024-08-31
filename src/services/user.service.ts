@@ -185,7 +185,6 @@ export class UserService {
         try {
             const apiUrl = this.config.get<string>('apiUrl');
             const response = await firstValueFrom(this.httpService.delete(`${apiUrl}/users/${id}`));
-            console.log(response);
 
             return {
                 success: true,
