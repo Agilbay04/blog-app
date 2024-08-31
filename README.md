@@ -30,7 +30,12 @@ $ npm install
 
 ## Setup .env file
 
-Prepare the .env file used to store the application environment.
+Prepare the ```.env``` file used to store the application environment.
+
+
+## Setup docker-compose.yml file
+
+Prepare the ```docker-compose.yml``` file used to generate database container.
 
 
 ## Database setup
@@ -61,6 +66,15 @@ $ http://localhost:5000
 # app swagger docs
 $ http://localhost:5000/api-docs
 ```
+
+## Notes
+
+After completing the project setup, please open the URL ```http://localhost:5000/api-docs``` in the browser, then run the endpoint ```/users/sync``` to retrieve user data and save it to the database, then run the endpoint ```/post/sync``` to retrieve post data and save it to the database.
+###
+After data sync is complete you can use this account:
+- username: brat
+- password: 12345678
+to login to the application and access other endpoints.
 
 
 ## Swagger Api Docs
