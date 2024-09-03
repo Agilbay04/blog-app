@@ -58,7 +58,7 @@ $ npx prisma generate
 
 ```bash
 # development
-$ npm run start
+$ npm run start:dev
 
 # app listen on
 $ http://localhost:5000
