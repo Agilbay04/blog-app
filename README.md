@@ -74,6 +74,7 @@ After completing the project setup, please open the URL ```http://localhost:5000
 After data sync is complete you can use this account:
 - <strong>username:</strong> Bret
 - <strong>password:</strong> 12345678
+###
 to login to the application and access other endpoints.
 
 
